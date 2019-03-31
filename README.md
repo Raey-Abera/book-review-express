@@ -1,4 +1,4 @@
-![library]()
+![book review](book.png)
 
 ## Installation
 
@@ -7,6 +7,6 @@
 
 ## Usage
 
-1. run `npm run library`
+1. run `npm run bookreview`
 2. Navigate to `localhost:3000`
 # book-review-express

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "library": "nodemon server.js"
+    "bookreview": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
