@@ -1,0 +1,13 @@
+body{
+background-image: url('books.jpg');
+background-size: cover;
+color:rgb(10,25,30);
+}
+h3{
+  margin-top: 40px;
+}
+
+section{
+  margin-left: 5%;
+  margin-top: 100px;
+}

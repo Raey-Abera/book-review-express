@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- extensible javascript- its a template engine that plugs stuff into the template -->
+<!-- i.e. a post template that renders the post -->
+<!-- whatever path you're on is rendered-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Review</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section>
+    <h1>Book review</h1>
+    <h2></h2>
+
+
+    <h3>Reviews</h3>
+    <ul class="messages">
+        <!-- //set up to loop/ itterate through the messages which is holding the documnets(objects-which contain properties-name, msg, thumbUp, ThumbDown) array-->
+    <% for(var i=0; i<messages.length; i++) {%>
+      <li class="message">
+        <span><%= messages[i].name %></span>
+        <span><%= messages[i].msg %></span>
+        <span><%= messages[i].city %></span>
+
+
+        <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+        <span><%= messages[i].thumbUp %></span>
+        <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+        <span><%= messages[i].thumbDown %></span>
+        <span><i class="far fa-heart" aria-hidden="true"></i></span>
+        <span><%= messages[i].heart %></span>
+        <span><i class="fas fa-book" aria-hidden="true"></i></span>
+        <span><%= messages[i].book %></span>
+        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+    <% } %>
+    </ul>
+
+    <h2>Add a book review</h2>
+
+    <form action="/messages" method="POST">
+      <input type="text" placeholder="book" name="name">
+      <input type="text" placeholder="reviews" name="msg">
+      <input type="text" placeholder="City" name="city" value="">
+      <button type="submit">Submit</button>
+    </form>
+
+  </section>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
